@@ -33,6 +33,7 @@ The **Property Menu** module is a custom Drupal module that creates a menu with 
    - Click on **Property Menu** in the main menu.
    - Under **Property Form**, you can add new properties.
    - Under **Property Data**, you can view, edit, and delete properties.
+   - Search & Pagination: You can search for property data and navigate through records using pagination.
 
 ## Uninstallation
 - To uninstall the module, go to **Extend -> Uninstall** and remove the **Property Menu** module.
