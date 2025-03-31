@@ -10,6 +10,7 @@ The **Property Menu** module is a custom Drupal module that creates a menu with 
 - Automatically creates a database table **drqx_mymenu_data** upon installation.
 - Provides a user-friendly interface for managing property records.
 - Deletes the database table when the module is uninstalled.
+- Includes search and pagination functionality in Property Data to search property records efficiently.
 
 ## Installation Guide
 1. **Download and Place the Module:**
