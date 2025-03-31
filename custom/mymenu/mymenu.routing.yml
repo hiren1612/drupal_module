@@ -1,0 +1,61 @@
+mymenu.content:
+  path: '/admin/mymenu'
+  defaults:
+    _controller: '\Drupal\mymenu\Controller\MyMenuController::showName'
+    _title: 'Property Menu'
+  requirements:
+    _permission: 'access content'
+  options:
+    _admin_route: TRUE
+
+mymenu.form:
+  path: '/admin/mymenu/myform'
+  defaults:
+    _form: '\Drupal\mymenu\Form\MyMenuForm'
+    _title: 'Property Form'
+  requirements:
+    _permission: 'access content'
+  options:
+    _admin_route: TRUE
+
+mymenu.dummy:
+  path: '/admin/mymenu/dummy'
+  defaults:
+    _controller: '\Drupal\mymenu\Controller\MyMenuController::dummyContent'
+    _title: 'Property Data'
+  requirements:
+    _permission: 'access content'
+  options:
+    _admin_route: TRUE
+
+
+# DB
+mymenu.list:
+  path: '/admin/mymenu/list'
+  defaults:
+    _controller: '\Drupal\mymenu\Controller\MyMenuController::dummyContent'
+    _title: 'Property Listings'
+  requirements:
+    _permission: 'access content'
+  options:
+    _admin_route: TRUE
+
+mymenu.edit:
+  path: '/admin/mymenu/edit/{id}'
+  defaults:
+    _form: '\Drupal\mymenu\Form\MyMenuEditForm'
+    _title: 'Edit Property'
+  requirements:
+    _permission: 'access content'
+  options:
+    _admin_route: TRUE
+
+mymenu.delete:
+  path: '/admin/mymenu/delete/{id}'
+  defaults:
+    _controller: '\Drupal\mymenu\Controller\MyMenuController::deleteProperty'
+    _title: 'Delete Property'
+  requirements:
+    _permission: 'access content'
+  options:
+    _admin_route: TRUE

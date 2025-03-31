@@ -1,0 +1,67 @@
+#toolbar-link-mymenu-content::before {
+    content: "\f085";
+    /* fa-cogs icon */
+    font-family: "FontAwesome";
+    /* Use "Font Awesome 6 Free" if applicable */
+    font-weight: 900;
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 8px;
+    margin-top: 10px;
+    vertical-align: middle;
+}
+
+.admin-menu-list {
+    list-style: none !important;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-menu-item {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-menu-item a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #005eb8;
+    display: flex;
+    align-items: center;
+}
+
+.admin-menu-item a:hover {
+    text-decoration: none;
+}
+
+/* .admin-menu-title::before { */
+    /* content: '▶ '; */
+    /* content: '> '; */
+    /* color: #005eb8; */
+    /* margin-right: 5px; */
+/* } */
+
+.admin-menu-title::before {
+    content: "";
+    display: inline-block;
+    width: 16px; /* Adjust size as needed */
+    height: 16px;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="%23005eb8"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+
+.admin-menu-description {
+    font-size: 0.9em;
+    color: #666;
+    margin-left: 20px;
+}
+
+.item-list ul li, .menu-item{
+    list-style: none !important;
+}

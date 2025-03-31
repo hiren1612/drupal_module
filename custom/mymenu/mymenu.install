@@ -1,0 +1,81 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the mymenu module.
+ */
+
+use Drupal\Core\Database\Database;
+
+/**
+ * Implements hook_install().
+ */
+function mymenu_install() {
+  $schema = Database::getConnection()->schema();
+
+  if (!$schema->tableExists('mymenu_data')) {
+    $schema->createTable('mymenu_data', [
+      'fields' => [
+        'id' => [
+          'type' => 'serial',
+          'not null' => TRUE,
+          'unsigned' => TRUE,
+        ],
+        'property_name' => [
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+        ],
+        'property_type' => [
+          'type' => 'varchar',
+          'length' => 50,
+          'not null' => TRUE,
+        ],
+        'price' => [
+          'type' => 'float',
+          'not null' => TRUE,
+        ],
+        'bedrooms' => [
+          'type' => 'int',
+          'not null' => TRUE,
+        ],
+        'bathrooms' => [
+          'type' => 'int',
+          'not null' => TRUE,
+        ],
+        'square_feet' => [
+          'type' => 'int',
+          'not null' => TRUE,
+        ],
+        'city' => [
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+        ],
+        'state' => [
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+        ],
+        'country' => [
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+        ],
+        'description' => [
+          'type' => 'text',
+          'not null' => TRUE,
+        ],
+      ],
+      'primary key' => ['id'],
+    ]);
+  }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function mymenu_uninstall() {
+  $schema = Database::getConnection()->schema();
+  $schema->dropTable('mymenu_data');
+}

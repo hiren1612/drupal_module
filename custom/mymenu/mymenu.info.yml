@@ -1,0 +1,7 @@
+name: 'PropertyMenu'
+type: module
+description: 'A custom module to display a menu item and a form.'
+core_version_requirement: ^11 || ^10 || ^9
+php: ">=8.2.18"
+package: Custom
+dependencies: []

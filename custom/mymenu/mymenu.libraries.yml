@@ -1,0 +1,12 @@
+mymenu.admin_styles:
+  version: 1.x
+  css:
+    theme:
+      css/mymenu_admin.css: {}
+      https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css: { type: external, minified: true }
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js: { type: external, minified: true }
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - fontawesome/fontawesome

@@ -1,0 +1,21 @@
+<?php
+
+use Drupal\Core\Routing\RouteSubscriberBase;
+use Symfony\Component\Routing\RouteCollection;
+
+/**
+ * Implements hook_help().
+ */
+function mymenu_help($route_name, $route_match) {
+  switch ($route_name) {
+    case 'help.page.mymenu':
+      return '<p>' . t('This is a custom module with an admin menu item.') . '</p>';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function mymenu_preprocess_html(&$variables) {
+  $variables['#attached']['library'][] = 'mymenu/mymenu.admin_styles';
+}

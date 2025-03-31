@@ -1,0 +1,34 @@
+mymenu.admin:
+  title: 'Property Menu'
+  route_name: mymenu.content
+  description: 'Custom Menu for MyMenu'
+  menu_name: admin
+  weight: 5
+  options:
+    _admin_route: TRUE
+  requirements:
+    _permission: 'access content'
+  metadata:
+    menu_icon: 'fas fa-cogs'
+
+mymenu.admin.form:
+  title: 'Property Form'
+  route_name: mymenu.form
+  parent: mymenu.admin
+  menu_name: admin
+  weight: 1
+  options:
+    _admin_route: TRUE
+  requirements:
+    _permission: 'access content'
+
+mymenu.admin.dummy:
+  title: 'Property Data'
+  route_name: mymenu.dummy
+  parent: mymenu.admin
+  menu_name: admin
+  weight: 2
+  options:
+    _admin_route: TRUE
+  requirements:
+    _permission: 'access content'
